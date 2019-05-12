@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'Titillium Web';
+}
+
+.container{
+  width: auto;
+  color:ghostwhite;
+  background: #e6ecf0;
+  min-height: 100vh;
+}
+
+.header{
+  display: flex;
+  padding: 30px 0 30px 0;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #201c29;
+  background-color: #100e17;
+}
+
+/*Modifying the list [start]*/
+.header ul{
+  display: flex;
+  align-items:center;
+  font-size: 20px;
+}
+.header li{
+  display: inline-block;
+}
+.header li a{
+  padding: 4px 8px;
+}
+.header li a:hover{
+  background: rgb(252,160,69);
+  background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,160,69,1) 100%);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+  transition: 1s
+}
+/*Modifying the list [end]*/
+
+/*Searchbox [start]*/
+.header p{
+  margin:0;
+  align-self: center;
+}
+.header input[type=text]{
+  margin:15px 0 15px 0;
+  padding:6px;
+  border: 2px solid ghostwhite;
+  border-right: none;
+  font-size: 17px;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  background: inherit;
+  color: ghostwhite;
+}
+.header ::placeholder{
+  color: ghostwhite;
+  opacity: 0.7;
+}
+.header input[type=text]:focus{
+  outline: none;
+}
+.header button{
+  font-size: 17px;
+  padding: 6px 10px;
+  border: 2px solid ghostwhite;
+  border-left: none;
+  background: rgb(252,160,69);
+  background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+  cursor: pointer;
+  transition: 0.5s;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.header button:focus{
+  outline: none;
+}
+/*Searchbox [end]*/
+
+/*Navigation bar [start]*/
+.nav{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  background: ghostwhite;
+  color:#100e17;
+}
+.nav a{
+  width: 100px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.15s;
+}
+.nav a:hover{
+  color:#ff5b0d;
+  border-radius: 3px;
+  border-bottom: 2px solid #ff5b0d;
+}
+/*Navigation bar [end]*/
+
+
+
+/*DESKTOP [START]*/
+@media only all and (min-width: 1000px){
+
+  /*Setting up the header [start]*/
+  .header{
+    padding: 18px 200px 18px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #100e17;
+  }
+  /*Setting up the header [end]*/
+
+  /*Modifying the list [start]*/
+  .header ul{
+    display: flex;
+    align-items:center;
+    font-size: 20px;
+  }
+
+  .header li{
+    display: inline-block;
+  }
+
+  .header li a{
+    padding: 4px 8px;
+  }
+
+  .header li a:hover{
+    background-color: #fc7438;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header a{
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  /*Modifying the list [end]*/
+
+  /*Searchbox [start]*/
+  .header p{
+    margin:0;
+    align-self: center;
+    width: 70%;
+    text-align: center;
+  }
+
+  .header input[type=text]{
+    padding:6px;
+    border: 2px solid ghostwhite;
+    border-right: none;
+    width: 75%;
+    font-size: 17px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    background: inherit;
+    color: ghostwhite;
+  }
+
+  .header ::placeholder{
+    color: ghostwhite;
+    opacity: 0.7;
+  }
+
+  .header input[type=text]:focus{
+    outline: none;
+  }
+
+  .header button{
+    font-size: 17px;
+    padding: 6px 10px;
+    border: 2px solid ghostwhite;
+    border-left: none;
+    background: rgb(252,160,69);
+    background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+    cursor: pointer;
+    transition: 0.5s;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  .header button:focus{
+    outline: none;
+  }
+  /*Searchbox [end]*/
+
+  /*Navigation bar[start]*/
+  .nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 400px;
+    background-color: ghostwhite;
+    color:#100e17;
+  }
+  /*Navigation bar[end]*/
+
+}
+/*DESKTOP [END]*/
