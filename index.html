@@ -1,11 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+      #settings a:hover{
+        padding: 4px 12px;
+      }
+    </style>
+    <title>smART</title>
   </head>
   <body>
-    <h1>laskdjflkasj</h1>
-    <p>asdfasdfasdf</p>
+    <div class="container">
+      <div class="header">
+        <h1><a href="#">smART</a></h1>
+        <p><input type="text" placeholder="Search.."><button type="button" name="button"><i class="fas fa-search"></i></button></p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">About</a></li>
+          <li id="settings"><a href="#"><i class="fas fa-caret-down"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav">
+        <a href="#" style="color:#ff5b0d; border-radius: 3px; border-bottom: 2px solid #ff5b0d;">Following</a>
+        <a href="#">Explore</a>
+      </div>
+
+    </div>
   </body>
 </html>
