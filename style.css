@@ -112,6 +112,150 @@ a{
 }
 /*Navigation bar [end]*/
 
+/*Main content[start]*/
+.main{
+  display: flex;
+  padding: 10px 0px;
+  color:#100e17;
+  font-weight:600;
+}
+
+/*left div[start]*/
+.info{
+  display: flex;
+  align-self: flex-start;
+  width: 25%;
+  flex-direction: column;
+  flex-wrap:wrap;
+  background: white;
+  padding: 8px;
+  margin: 4px;
+}
+.profile_pic{
+  font-size: 50px;
+  color:#ff5b0d;
+  transition: 0.1s;
+  padding-right: 10px;
+}
+.username a:hover{
+  text-decoration: underline;
+}
+.followers{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  margin:20px 6px;
+}
+.followers div:hover{
+  transition: 0.15s;
+  color:#ff5b0d;
+}
+.followers h3{
+  color:#ff5b0d;
+}
+/*left div[end]*
+
+
+/*center div[start]*/
+.posts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:50%;
+  background: white;
+  padding: 8px;
+  margin: 4px;
+}
+.single-post{
+  display: flex;
+  padding: 20px 10px;
+  border-bottom: 1px solid black;
+}
+.posts .content{
+  display: flex;
+  flex-direction: column;
+}
+.posts .content p{
+  font-size: 13px;
+  font-weight:400;
+}
+.posts .content img{
+  width: 95%;
+  margin: 8px;
+}
+.posts .content span a:hover{
+  text-decoration: underline;
+}
+/*center div[end]*/
+
+
+/*right div[start]*/
+.suggestions{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  width: 25%;
+  background: white;
+  padding: 8px;
+  margin: 4px;
+}
+.suggestions .d1{
+  display: flex;
+  justify-content: space-between;
+}
+.suggestions .d1 a:hover{
+  text-decoration: underline;
+}
+.accounts{
+  display: flex;
+  flex-direction: column;
+}
+.accounts .username{
+  padding:10px 0;
+  flex-grow: 1;
+}
+.accounts a{
+  align-self: center;
+}
+.user{
+  display:flex;
+  flex-wrap:wrap;
+  align-content:center
+}
+.user button{
+  color: ghostwhite;
+  font-size: 17px;
+  padding: 4px 8px;
+  align-self: center;
+  border-radius: 5px;
+  border:0;
+  background: rgb(252,160,69);
+  background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+  cursor: pointer;
+  transition: 0.5s;
+  margin:0  ;
+}
+.user button:focus{
+  outline:none;
+}
+
+/*right div[end]*/
+
+/*Main content[end]*/
+
+#create{
+  position: fixed;
+  left: 72%;
+  top: 85%;
+  color:#ff5b0d;
+  font-size: 40px;
+  transition: 0.1s;
+}
+#create:hover{
+  font-size: 50px;
+  transition: 0.5s;
+}
 
 
 /*DESKTOP [START]*/
@@ -133,21 +277,17 @@ a{
     align-items:center;
     font-size: 20px;
   }
-
   .header li{
     display: inline-block;
   }
-
   .header li a{
     padding: 4px 8px;
   }
-
   .header li a:hover{
     background-color: #fc7438;
     padding-left: 30px;
     padding-right: 30px;
   }
-
   .header a{
     text-decoration: none;
     color: inherit;
@@ -163,7 +303,6 @@ a{
     width: 70%;
     text-align: center;
   }
-
   .header input[type=text]{
     padding:6px;
     border: 2px solid ghostwhite;
@@ -175,16 +314,13 @@ a{
     background: inherit;
     color: ghostwhite;
   }
-
   .header ::placeholder{
     color: ghostwhite;
     opacity: 0.7;
   }
-
   .header input[type=text]:focus{
     outline: none;
   }
-
   .header button{
     font-size: 17px;
     padding: 6px 10px;
@@ -197,7 +333,6 @@ a{
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
   }
-
   .header button:focus{
     outline: none;
   }
@@ -212,6 +347,28 @@ a{
     color:#100e17;
   }
   /*Navigation bar[end]*/
-
+  .main{
+    padding: 10px 200px;
+  }
+  .posts .content p{
+    font-size: 14px;
+    font-weight:400;
+  }
+  .user button{
+    color: ghostwhite;
+    font-size: 17px;
+    padding: 4px 8px;
+    align-self: center;
+    border-radius: 5px;
+    border:0;
+    background: rgb(252,160,69);
+    background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+    cursor: pointer;
+    transition: 0.5s;
+    margin:0 0 0 30px;
+  }
+  .user button:focus{
+    outline:none;
+  }
 }
 /*DESKTOP [END]*/
