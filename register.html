@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="register-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <form role="form" class="register-box">
+        <h2>Register Here</h2>
+        <div>
+          <input class="input-box" type="email" name="email" data-validation="required email" placeholder="Email">
+        </div>
+        <div>
+        <input class="input-box" type="text" placeholder="Username">
+        </div>
+        <div>
+          <input class="input-box" type="password" placeholder="Password">
+        </div>
+        <div>
+          <input class="input-box" type="password" placeholder="Confirm Password">
+        </div>
+        <a href="index.html" id="register-btn">Register</a>
+        <a href="login.html">Already have an account? Log in</a>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+		$.validate({
+			errorMessageClass: "error",
+		});
+	</script>
+  </body>
+</html>

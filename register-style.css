@@ -16,28 +16,26 @@ html{
   align-items: center;
   justify-content: center;
 }
-
-.login-box{
+.register-box{
   height: 300px;
   padding:0 75px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   justify-content: space-around;
   background: rgb(252,160,69);
   background: linear-gradient(0deg, rgba(252,160,69,1) 0%, rgba(253,73,42,1) 100%);
   text-align: center;
 }
-
 .input-box{
-  height: 45px;
+  height: 35px;
   font-size: 20px;
   padding-left: 10px;
   border:1px solid darkgray;
   border-radius: 4px;
 }
-
-#login-btn{
+#register-btn{
   font-size: 20px;
   text-decoration: none;
   padding: 10px;
@@ -47,25 +45,22 @@ html{
   border:none;
   border-radius: 5px;
 }
-
-.login-box button a{
+.register-box button a{
   text-decoration: none;
-}
-
-.login-box button:hover{
   cursor: pointer;
 }
-
-.login-box a{
+.register-box a{
   color: inherit;
 }
-
-@media (min-width: 320px) and (max-width: 480px){
-  .login-box{
+.error{
+  color: white;
+}
+@media (min-width:320px) and (max-width:480px){
+  .register-box{
     padding: 10px;
   }
 
-  .login-box input{
+  .register-box input{
     width:200px;
   }
 }
