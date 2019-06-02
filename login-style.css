@@ -1,0 +1,72 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+html{
+    font-family: 'Titillium Web';
+}
+.container{
+  display: flex;
+  width: auto;
+  color:ghostwhite;
+  background: rgb(114,43,14);
+  background: radial-gradient(circle, rgba(114,43,14,1) 0%, rgba(16,14,23,1) 69%);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box{
+  height: 300px;
+  padding:0 75px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgb(252,160,69);
+  background: linear-gradient(0deg, rgba(252,160,69,1) 0%, rgba(253,73,42,1) 100%);
+  text-align: center;
+}
+
+.input-box{
+  height: 45px;
+  font-size: 20px;
+  padding-left: 10px;
+  border:1px solid darkgray;
+  border-radius: 4px;
+}
+
+#login-btn{
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.5s;
+  background-color: #100e17;
+  color: ghostwhite;
+  border:none;
+  border-radius: 5px;
+}
+
+.login-box button a{
+  text-decoration: none;
+}
+
+.login-box button:hover{
+  cursor: pointer;
+}
+
+.login-box a{
+  color: inherit;
+  display: inline-block;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .login-box{
+    padding: 10px;
+  }
+
+  .login-box input{
+    width:200px;
+  }
+}
