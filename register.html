@@ -9,6 +9,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="slider">
+        <div id="welcome" class="slides fade">
+          <div><h1>Welcome To smArt</h1></div>
+        </div>
+        <img class="slides fade" src="img-1.jpg" alt="">
+        <img class="slides fade" src="img-2.jpg" alt="">
+      </div>
       <form role="form" class="register-box">
         <h2>Register Here</h2>
         <div>
@@ -34,5 +41,23 @@
 			errorMessageClass: "error",
 		});
 	</script>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides(){
+      var slides = document.getElementsByClassName('slides');
+      for(var i = 0;i<slides.length;i++){
+        slides[i].style.display = "none"
+      }
+      slideIndex++;
+      if(slideIndex>slides.length){
+        slideIndex =1;
+      }
+      slides[slideIndex-1].style.display = "flex";
+      setTimeout(showSlides,5000);
+    }
+  </script>
   </body>
 </html>

@@ -14,10 +14,10 @@ html{
   background: radial-gradient(circle, rgba(114,43,14,1) 0%, rgba(16,14,23,1) 69%);
   min-height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .register-box{
-  height: 300px;
+  height: 557px;
   padding:0 75px;
   border-radius: 10px;
   display: flex;
@@ -54,6 +54,47 @@ html{
 }
 .error{
   color: white;
+}
+#welcome{
+  display: flex;
+  width: 750px;
+  height: 422px;
+  background: rgb(252,160,69);
+  background: linear-gradient(0deg, rgba(252,160,69,1) 0%, rgba(253,73,42,1) 100%);
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#welcome h1{
+  display: inline;
+  justify-content: center;
+}
+.slides{
+  display:none;
+}
+
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@media (max-width:1178px){
+  .slider{
+    display: none;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 @media (min-width:320px) and (max-width:480px){
   .register-box{
