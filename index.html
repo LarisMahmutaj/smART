@@ -17,15 +17,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
+      <div class="header" id="myHeader">
         <h1><a href="#">smART</a></h1>
-        <p><input type="text" placeholder="Search.."><button type="button" name="button"><i class="fas fa-search"></i></button></p>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="login.html">Logout</a></li>
-          <li id="settings"><a href="#"><i class="fas fa-caret-down"></i></a></li>
-        </ul>
+        <p id="searchbox"class="search"><input type="text" placeholder="Search.."><button type="button" name="button"><i class="fas fa-search"></i></button></p>
+        <div class="menu" id="myMenu">
+          <a class="icon" onclick="hamburger(), searchHide()"><i class="fa fa-bars"></i></a>
+          <a href="#" id="home" class="item">Home</a>
+          <a href="#" id="profile" class="item">Profile</a>
+          <a href="login.html" id="logout" class="item">Log out</a>
+        </div>
       </div>
       <div class="nav">
         <a href="#" style="color:#ff5b0d; border-radius: 3px; border-bottom: 2px solid #ff5b0d;">Following</a>
@@ -122,5 +122,32 @@
       </div>
       <a href="#"><i id="create" class="fas fa-edit"></i></a>
     </div>
+
+    <script>
+      function hamburger() {
+        var x = document.getElementById("myMenu");
+          if (x.className === "menu") {
+            x.className += " responsive";
+          } else {
+          x.className = "menu";
+          }
+
+          var y = document.getElementById("myHeader");
+          if(y.className === "header"){
+            y.className+= " align-end";
+          }else{
+            y.className = "header";
+          }
+      }
+
+      function searchHide(){
+        var x = document.getElementById("searchbox");
+        if(x.className === "search"){
+          x.className += " removeSearch"
+        }else{
+          x.className="search"
+        }
+      }
+    </script>
   </body>
 </html>

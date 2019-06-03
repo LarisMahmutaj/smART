@@ -17,29 +17,39 @@ html{
 .header{
   display: flex;
   padding: 30px 0 30px 0;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid #201c29;
   background-color: #100e17;
 }
 
-/*Modifying the list [start]*/
-.header ul{
+/*Modifying the menu [start]*/
+.menu{
+  overflow: hidden;
   display: flex;
-  align-items:center;
   font-size: 20px;
 }
-.header li{
-  display: inline-block;
+
+.header .icon{
+  display:none;
+
 }
-.header li a{
+
+.menu a{
   padding: 4px 8px;
+  display: block;
 }
-.header li a:hover{
+.menu a:hover{
   background: rgb(252,160,69);
   background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,160,69,1) 100%);
-  padding-left: 30px;
-  padding-right: 30px;
+
+}
+#logout{
+  color: red;
+}
+#logout:hover{
+  color: inherit;
+  transition: 0.1s;
 }
 a{
   text-decoration: none;
@@ -47,7 +57,9 @@ a{
   border-radius: 5px;
   transition: 1s
 }
-/*Modifying the list [end]*/
+
+
+/*Modifying the menu [end]*/
 
 /*Searchbox [start]*/
 .header p{
@@ -268,7 +280,50 @@ a{
     display: none;
   }
 
+
+
+  .header{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width:767px){
+  .menu{
+    flex-direction: column;
+  }
+  .menu .icon{
+    display:block;
+    transition: 0.5s;
+  }
+  .menu a{
+    display:none;
+  }
+
   .header h1{
+    display: none;
+  }
+  .menu.responsive{
+    position: relative;
+  }
+
+  .align-end{
+    padding-right: 30px;
+    justify-content: flex-end;
+  }
+
+  .menu.responsive .icon{
+    right:0;
+    top:0;
+  }
+
+  .menu.responsive a{
+    float:none;
+    text-align: right;
+    display: block;
+  }
+
+  .removeSearch{
     display: none;
   }
 }
@@ -283,7 +338,10 @@ a{
   .posts{
     width: 75%;
   }
+
 }
+
+
 
 /*DESKTOP [START]*/
 @media only all and (min-width: 1000px){
