@@ -8,6 +8,7 @@ html{
 }
 .container{
   display: flex;
+  flex-direction: row;
   width: auto;
   color:ghostwhite;
   background: rgb(114,43,14);
@@ -28,6 +29,10 @@ html{
   background: linear-gradient(0deg, rgba(252,160,69,1) 0%, rgba(253,73,42,1) 100%);
   text-align: center;
 }
+.register-form{
+  display: flex;
+  flex-direction: column;
+}
 .input-box{
   height: 35px;
   font-size: 20px;
@@ -44,11 +49,9 @@ html{
   color: ghostwhite;
   border:none;
   border-radius: 5px;
-}
-.register-box button a{
-  text-decoration: none;
   cursor: pointer;
 }
+
 .register-box a{
   color: inherit;
 }
