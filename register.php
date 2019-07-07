@@ -26,7 +26,7 @@
       if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
         $msg = 'Please use a valid email!';
       }else{
-        $sql = 'SELECT * FROM user WHERE email = :email';
+        $sql = 'SELECT * FROM member WHERE email = :email';
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['email' => $email]);
         $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -41,7 +41,7 @@
             if($password != $password2){
               $msg = 'Passwords do not match!';
             }else{
-              $sql = 'SELECT * FROM user WHERE username = :username';
+              $sql = 'SELECT * FROM member WHERE username = :username';
               $stmt = $pdo->prepare($sql);
               $stmt->execute(['username' => $username]);
               $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -50,7 +50,7 @@
               }else{
                 $password_hashed = password_hash($password, PASSWORD_DEFAULT);
                 $vkey = md5(time().$username);
-                $sql = 'INSERT INTO user(username, email, password, vkey) VALUES(:username, :email, :password_hashed, :vkey)';
+                $sql = 'INSERT INTO member(username, email, password, vkey) VALUES(:username, :email, :password_hashed, :vkey)';
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute(['username' => $username, 'email' => $email, 'password_hashed' => $password_hashed, 'vkey' => $vkey]);
                 if($stmt){
@@ -98,8 +98,8 @@
         <div id="welcome" class="slides fade">
           <div><h1>Welcome To smArt</h1></div>
         </div>
-        <img class="slides fade" src="img-1.jpg" alt="">
-        <img class="slides fade" src="img-2.jpg" alt="">
+        <img class="slides fade" src="SliderImages//img-1.jpg" alt="">
+        <img class="slides fade" src="SliderImages//img-2.jpg" alt="">
       </div>
       <form role="form" method="post" action="register.php" class="register-box">
         <h2>Register Here</h2>

@@ -136,7 +136,7 @@ a{
 .info{
   display: flex;
   align-self: flex-start;
-  width: 25%;
+  width: 20%;
   flex-direction: column;
   flex-wrap:wrap;
   background: white;
@@ -169,11 +169,13 @@ a{
 
 
 /*center div[start]*/
+
+/* Center div[start] */
 .posts{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width:50%;
+  width:60%;
   background: white;
   padding: 8px;
   margin: 4px;
@@ -182,6 +184,7 @@ a{
   display: flex;
   padding: 20px 10px;
   border-bottom: 1px solid black;
+  justify-content: space-between;
 }
 .posts .content{
   display: flex;
@@ -192,8 +195,8 @@ a{
   font-weight:400;
 }
 .posts .content img{
-  width: 95%;
-  margin: 8px;
+  width: 100%;
+  margin: 8px 0;
 }
 .posts .content span a:hover{
   text-decoration: underline;
@@ -207,7 +210,7 @@ a{
   flex-direction: column;
   align-self: flex-start;
   justify-content: center;
-  width: 25%;
+  width: 20%;
   background: white;
   padding: 8px;
   margin: 4px;
@@ -254,11 +257,12 @@ a{
 
 /*right div[end]*/
 
+
 /*Main content[end]*/
 
 #create{
   position: fixed;
-  left: 72%;
+  left: 85%;
   top: 85%;
   color:#ff5b0d;
   font-size: 40px;
@@ -433,7 +437,7 @@ a{
   }
   /*Navigation bar[end]*/
   .main{
-    padding: 10px 200px;
+    padding: 10px 100px;
   }
   .posts .content p{
     font-size: 14px;
@@ -454,6 +458,110 @@ a{
   }
   .user button:focus{
     outline:none;
+  }
+
+  .bg-modal{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .modal-content{
+    color: #100e17;
+    width: auto;
+    height: auto;
+    background-color: #100e17;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+  }
+
+  .modal-image{
+    width: 75%;
+    display: none;
+  }
+
+  .title-bar{
+    color:ghostwhite;
+    display: flex;
+    justify-content:space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid #100e17;
+    padding: 0 15px;
+    background: rgb(252,160,69);
+    background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+  }
+
+  .title-bar h3{
+    align-self: center;
+  }
+  .close{
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(45deg);
+  }
+
+  .upload{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-between;
+  }
+  .upload textarea{
+    font-family: inherit;
+    font-size: 17px;
+    color: ghostwhite;
+    resize: none;
+    border: 2px solid ghostwhite;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #100e17;
+  }
+
+  .upload input[type="file"] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .upload input[type="file"] + label {
+    background: rgb(252,160,69);
+    background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+    border-radius: 5px;;
+    color: ghostwhite;
+    font-weight:bold;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  #uploadBtn{
+    background: rgb(252,160,69);
+    background: linear-gradient(90deg, rgba(252,160,69,1) 0%, rgba(253,29,29,1) 100%);
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    color: ghostwhite;
+    font-weight:550;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 30px;
+    align-self: flex-end;
   }
 }
 /*DESKTOP [END]*/

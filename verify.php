@@ -12,7 +12,7 @@
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
-    $sql = 'SELECT verified, vkey FROM user WHERE verified = 0 AND vkey = :vkey';
+    $sql = 'SELECT verified, vkey FROM member WHERE verified = 0 AND vkey = :vkey';
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['vkey' => $vkey]);
     $resultSet = $stmt->fetchAll();
@@ -20,7 +20,7 @@
     if(count($resultSet) != 1){
       $msg = 'This account is invalid or has already been verified';
     }else{
-      $sql = 'UPDATE user SET verified = 1 WHERE vkey = :vkey LIMIT 1';
+      $sql = 'UPDATE member SET verified = 1 WHERE vkey = :vkey LIMIT 1';
       $stmt = $pdo->prepare($sql);
       $stmt->execute(['vkey' => $vkey]);
       header('location:login.php');

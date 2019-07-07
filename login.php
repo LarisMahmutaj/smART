@@ -20,13 +20,13 @@
     $password = htmlspecialchars($_POST['password']);
 
     if(!empty($username) && !empty($password)){
-      $sql = 'SELECT * FROM user WHERE username = :username';
+      $sql = 'SELECT * FROM member WHERE username = :username';
       $stmt = $pdo->prepare($sql);
       $stmt->execute(['username' => $username]);
-      $user = $stmt->fetch();
-      $_SESSION['user'] = $user;
-      $verified = $user->verified;
-      $hash = $user->password;
+      $member = $stmt->fetch();
+      $_SESSION['member'] = $member;
+      $verified = $member->verified;
+      $hash = $member->password;
       if($verified == 1){
         if(!password_verify($password, $hash)){
           $msg = 'Username or password incorrect';
